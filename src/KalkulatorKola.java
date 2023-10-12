@@ -2,20 +2,17 @@ import java.util.Scanner;
 public class KalkulatorKola {
     public static void main(String[] args) {
        double pi = 3.14;
-       double r;
-       double pole;
-       double obwod;
-
 
        Scanner scan = new Scanner(System.in);
        System.out.println("Podaj promien koła w [cm]");
-       r= scan.nextDouble();
+       double promienKola = scan.nextDouble();
 
-       pole = pi * (r*r);
-       obwod = (2 * pi) * r;
+       //pole = pi * (r*r)
+       double pole = pi * Math.pow(promienKola,2); // Math. to funkcje matematyczne
+       double obwod = (2 * pi) * promienKola;
 
-       System.out.println("Obwód koła to:" + obwod);
-       System.out.println("Pole koła to:" + pole);
+       System.out.println("Obwód koła to: " + obwod + " cm");
+       System.out.println("Pole koła to: " + pole + "  cm^2");
 
     }
 }
