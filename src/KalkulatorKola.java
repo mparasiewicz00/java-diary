@@ -27,8 +27,8 @@ public class KalkulatorKola {
        System.out.println("Obwód koła to: " + obwodKola + " cm");
        System.out.println("Pole koła to: " + poleKola + "  cm^2");
 
-       System.out.println("Pole trójkąta to: " + poleTrojkata + " cm^2");
-       System.out.println("Obwód trójkąta to: " + obwodTrojkata + "  cm");
+       System.out.println("Pole trójkąta to:  " + poleTrojkata + " cm^2");
+       System.out.println("Obwód trójkąta to:  " + obwodTrojkata + "  cm");
 
     }
 }
