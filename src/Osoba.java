@@ -5,7 +5,7 @@ public class Osoba {
         final int ACTUAL_YEAR = 2023;
         int rokUrodzenia;
         int wiekUzytkownika;
-        String wiek = null;
+        String wiek;
         String imie = null;
         String nazwisko = null;
 
@@ -37,6 +37,7 @@ public class Osoba {
 
         System.out.println("Twoje imię to: " + imie + ", a nazwisko to: " + nazwisko);
         System.out.println("Masz " + wiekUzytkownika + " lat, czyli urodziłeś się w " + wiek + " wieku");
+
     }
 
     public static int getInt() {
