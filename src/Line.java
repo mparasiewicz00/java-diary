@@ -1,7 +1,7 @@
 public class Line {
 
-    private Point start;
-    private Point end;
+    final Point start;
+    final Point end;
 
 
     public Line(Point start, Point end){
@@ -19,6 +19,7 @@ public class Line {
         start.flip();
         end.flip();
     }
+
     @Override
     public String toString(){
         return "Linia z punktu: " + start + "do punktu: " + end;
