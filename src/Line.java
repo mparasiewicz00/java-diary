@@ -3,7 +3,6 @@ public class Line {
     final Point start;
     final Point end;
 
-
     public Line(Point start, Point end){
         this.start = start;
         this.end = end;
