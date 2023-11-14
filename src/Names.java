@@ -22,13 +22,7 @@ public class Names {
     }
 
     public static void main(String[] args) {
-        List<String> nameList = new ArrayList<>();
-        nameList.add("Kowalski");
-        nameList.add("Nowak");
-        nameList.add("Smith");
-        nameList.add("Johnson");
-        nameList.add("   ");
-
+        List<String> nameList = List.of("Kowalski", "Nowak", "Smith", "Johnson");
 
         Names nameChooser = new Names(nameList);
 
@@ -40,7 +34,6 @@ public class Names {
                 System.out.println("Brak dostępnych nazwisk.");
             }
         }
-
 
     }
 }
