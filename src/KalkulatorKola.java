@@ -19,8 +19,9 @@ public class KalkulatorKola {
                for( int i = 0; i < trojkat.length; i++) {
                   trojkat[i] = getDouble();
                }
-
-                if (trojkat[0] + trojkat[1] > trojkat[2] && trojkat[1] + trojkat[2] > trojkat[0] && trojkat[0] + trojkat[2] > trojkat[1]) {
+               if(!(trojkat[0]>0&&trojkat[1]>0&&trojkat[2]>0)){
+                  System.out.println("Niepoprawne dane, spróbuj jeszcze raz!");
+               } else if (trojkat[0] + trojkat[1] > trojkat[2] && trojkat[1] + trojkat[2] > trojkat[0] && trojkat[0] + trojkat[2] > trojkat[1]) {
                   System.out.println("Podaj operację do wykonania: P jeżeli pole lub O jeżeli obwód ");
                   operacja = getString().toUpperCase();
                   if (operacja.equals("P")) {
@@ -28,7 +29,7 @@ public class KalkulatorKola {
                              "Podaj wysokość trójkąta w [cm]");
                      double wysokoscTrojkata = getDouble();
                      double poleTrojkata = (trojkat[0] * wysokoscTrojkata) / 2;
-                     System.out.println("Obwód trójkąta to:  " + poleTrojkata + "  cm");
+                     System.out.println("Pole trójkąta to:  " + poleTrojkata + "  cm");
                   } else if (operacja.equals("O")) {
                      double obwodTrojkata = trojkat[0] + trojkat[1] + trojkat[2];
                      System.out.println("Obwód trójkąta to:  " + obwodTrojkata + "  cm");
@@ -36,24 +37,34 @@ public class KalkulatorKola {
                      System.out.println("Nieprawidłowa operacja!");
                   }
                }
+               else {
+                  System.out.println("Niepoprawne dane, spróbuj jeszcze raz!");
+               }
+
                break;
 
             case "K":
                System.out.println("Podaj promien koła w [cm]");
                double promienKola = getDouble();
-               System.out.println("Podaj operację do wykonania: P jeżeli pole lub D jeżeli długość ");
-               operacja = getString().toUpperCase();
 
-               if (operacja.equals("P")) {
-                  double poleKola = pi * Math.pow(promienKola, 2); // Math. to funkcje matematyczne
-                  System.out.println("Pole koła to: " + poleKola + "  cm^2");
-               } else if (operacja.equals("D")) {
-                  double dlugoscKola = (2 * pi) * promienKola;
-                  System.out.println("Obwód koła to: " + dlugoscKola + " cm");
+               if(!(promienKola>0)) {
+                  System.out.println("Niepoprawne dane, spróbuj jeszcze raz!");
                } else {
-                  System.out.println("Nieprawidłowa operacja!");
+                  System.out.println("Podaj operację do wykonania: P jeżeli pole lub D jeżeli długość ");
+                  operacja = getString().toUpperCase();
+
+                  if (operacja.equals("P")) {
+                     double poleKola = pi * Math.pow(promienKola, 2); // Math. to funkcje matematyczne
+                     System.out.println("Pole koła to: " + poleKola + "  cm^2");
+                  } else if (operacja.equals("D")) {
+                     double dlugoscKola = (2 * pi) * promienKola;
+                     System.out.println("Długość koła to: " + dlugoscKola + " cm");
+                  } else {
+                     System.out.println("Nieprawidłowa operacja!");
+                  }
                }
                break;
+
 
             case "W":
                System.out.println("Do widzenia!");
