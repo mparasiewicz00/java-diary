@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class KalkulatorKola {
     public static void main(String[] args) {
-       final double pi = 3.14;
+       final double pi = Math.PI;
        double[] trojkat = new double[3];
        String opcja;
        String operacja;
@@ -10,19 +10,19 @@ public class KalkulatorKola {
 
        do {
           System.out.println("Podaj figurę, której chcesz uruchomić kalkulator: T dla trójkąta lub K dla koła lub W jeśli chcesz wyjść z programu ");
-          opcja = getString();
+          opcja = getString().toUpperCase();
 
          switch (opcja) {
             case "T":
 
                System.out.println("Podaj kolejno długości boków trójkąta w [cm], pierwszy podany bok to podstawa");
-               for( int i = 0; i < 3; i++) {
+               for( int i = 0; i < trojkat.length; i++) {
                   trojkat[i] = getDouble();
                }
 
                 if (trojkat[0] + trojkat[1] > trojkat[2] && trojkat[1] + trojkat[2] > trojkat[0] && trojkat[0] + trojkat[2] > trojkat[1]) {
                   System.out.println("Podaj operację do wykonania: P jeżeli pole lub O jeżeli obwód ");
-                  operacja = getString();
+                  operacja = getString().toUpperCase();
                   if (operacja.equals("P")) {
                      System.out.println("W takim razie potrzebuję jeszcze wysokości trójkąta.\n" +
                              "Podaj wysokość trójkąta w [cm]");
@@ -42,7 +42,7 @@ public class KalkulatorKola {
                System.out.println("Podaj promien koła w [cm]");
                double promienKola = getDouble();
                System.out.println("Podaj operację do wykonania: P jeżeli pole lub D jeżeli długość ");
-               operacja = getString();
+               operacja = getString().toUpperCase();
 
                if (operacja.equals("P")) {
                   double poleKola = pi * Math.pow(promienKola, 2); // Math. to funkcje matematyczne
@@ -66,11 +66,11 @@ public class KalkulatorKola {
        } while (!opcja.equals("W"));
     }
 
-   public static double getDouble() {
+   private static double getDouble() {
       return new Scanner(System.in).nextDouble();
    }
 
-   public static String getString() {
+   private static String getString() {
       return new Scanner(System.in).next();
    }
 }
