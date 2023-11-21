@@ -12,11 +12,8 @@ public class dzielPrzezTrzy {
         } else {
             System.out.println("Liczba jest podzielna przez zero");
         }
-
-
     }
     private static int getInt(){
         return new Scanner(System.in).nextInt();
     }
-
 }
