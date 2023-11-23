@@ -2,6 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+//        napisz program, który będzie losował nazwiska klientów z listy a następniei je usuwał.
+//        zaimplementuj klasę Names z obiektowym atrybutem names odpowiadającym wspomnianej liście i z obiektową metodą choose(), któora zwraca losowo wybrane
+//        nazwysko z listy names usuwając je jednocześnie
+
 public class Names {
     private final List<String> names;
     private final Random random;
@@ -22,7 +26,7 @@ public class Names {
     }
 
     public static void main(String[] args) {
-        List<String> nameList = List.of("Kowalski", "Nowak", "Smith", "Johnson");
+        List<String> nameList = List.of("Abacki", "Babacki", "Cabacki", "Cabacki");
 
         Names nameChooser = new Names(nameList);
 

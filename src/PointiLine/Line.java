@@ -1,3 +1,7 @@
+package PointiLine;
+
+import PointiLine.Point;
+
 public class Line {
 
     final Point start;

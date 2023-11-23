@@ -1,3 +1,5 @@
+package PointiLine;
+
 public class TestPointiLine {
     public static void main(String[] args){
         Point point = new Point(1,0);

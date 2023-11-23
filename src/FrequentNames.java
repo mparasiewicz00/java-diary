@@ -1,6 +1,10 @@
 import java.util.HashMap;
 import java.util.Map;
 
+//        Napisz program, który będzie wybierał najczęściej występujące imiona klientów z listy a na stępnie je usuwał.
+//        Dokładniej, zaimplementuj klasę FrequentNames z obiektowym atrybutem frequentNames i z obiektową metodą choose(),
+//        która zwraca najczęściej występujące imię z frequentNames usuwając je jednocześnie, oraz metodę insert(String name) wstawiającą imię
+
 public class FrequentNames {
     private final Map<String, Integer> frequentNames;
 
