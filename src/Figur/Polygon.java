@@ -16,7 +16,6 @@ class Polygon implements Figur {
         }
     }
 
-
     public void flip() {
         // Przerzucanie wielokąta to odwrócenie kolejności punktów
         List<Point> reversedPoints = new ArrayList<>(points);
