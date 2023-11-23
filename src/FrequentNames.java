@@ -1,15 +1,11 @@
-import java.util.HashMap;
-import java.util.Map;
-
-//        Napisz program, który będzie wybierał najczęściej występujące imiona klientów z listy a na stępnie je usuwał.
-//        Dokładniej, zaimplementuj klasę FrequentNames z obiektowym atrybutem frequentNames i z obiektową metodą choose(),
-//        która zwraca najczęściej występujące imię z frequentNames usuwając je jednocześnie, oraz metodę insert(String name) wstawiającą imię
+import java.util.ArrayList;
+import java.util.List;
 
 public class FrequentNames {
-    private final Map<String, Integer> frequentNames;
+    private final List<String> frequentNames;
 
     public FrequentNames() {
-        this.frequentNames = new HashMap<>();
+        this.frequentNames = new ArrayList<>();
     }
 
     public String choose() {
@@ -20,22 +16,31 @@ public class FrequentNames {
         String mostFrequentName = null;
         int maxFrequency = 0;
 
-        for (Map.Entry<String, Integer> entry : frequentNames.entrySet()) {
-            if (entry.getValue() > maxFrequency) {
-                mostFrequentName = entry.getKey();
-                maxFrequency = entry.getValue();
+        for (String name : frequentNames) {
+            int frequency = countFrequency(name);
+            if (frequency > maxFrequency) {
+                mostFrequentName = name;
+                maxFrequency = frequency;
             }
         }
 
-        if (mostFrequentName != null) {
-            frequentNames.remove(mostFrequentName);
-        }
+        frequentNames.remove(mostFrequentName);
 
         return mostFrequentName;
     }
 
     public void insert(String name) {
-        frequentNames.put(name, frequentNames.getOrDefault(name, 0) + 1);
+        frequentNames.add(name);
+    }
+
+    private int countFrequency(String name) {
+        int count = 0;
+        for (String n : frequentNames) {
+            if (n.equals(name)) {
+                count++;
+            }
+        }
+        return count;
     }
 
     public static void main(String[] args) {
@@ -53,6 +58,11 @@ public class FrequentNames {
             System.out.println("Najczęściej występujące imię: " + mostFrequentName);
         } else {
             System.out.println("Brak imion do wyboru.");
+        }
+
+        System.out.println("Zawartość listy frequentNames po operacjach:");
+        for (String name : frequentNames.frequentNames) {
+            System.out.println("Imię: " + name);
         }
     }
 }

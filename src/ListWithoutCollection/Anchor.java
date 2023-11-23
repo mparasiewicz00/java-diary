@@ -1,6 +1,12 @@
 package ListWithoutCollection;
-
 import java.util.Objects;
+
+//     Zaimplementuj listy zawierające liczby całkowite (typ int) bez uzycia kolekcji. Lista ma się składać z kotwicy. yj. obiektu klasy Anchor,
+//     oraz elementów tj. obiektów klasy Element. Obiekty klasy Element mają posiadać atrybut val typu int oraz opcjonalnie wskaźnik na następny element listy,
+//     dokładniej obiekt klasy Element. Klasa Anchor ma posiadać atrybut first typu Element wskazujący na pierwszy element listy oraz metody
+//        - insertAtTheFront(int x) - wstawiająca liczbę x na początek listy
+//        -isertAtTheend(int x) - wstawiająca liczbę x na koniec listy
+//        -removeFirst() - usuwająca pierwszy element listy
 
 public class Anchor implements Cloneable {
     private Element first;
