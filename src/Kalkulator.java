@@ -26,39 +26,39 @@ public class Kalkulator {
         do{
 
             switch (dzialanie){
-                case "*":
+                case "*" -> {
                     wynik = (pierwszaLiczba * drugaLiczba);
                     System.out.println("Wynik to: " + wynik);
-                    break;
-                case "/":
+                }
+                case "/" -> {
 
-                    if (!(drugaLiczba == 0)){
+                    if (drugaLiczba != 0){
                         wynik = (pierwszaLiczba / drugaLiczba);
+                        System.out.println("Wynik to: " + wynik);
                     } else {
                         System.out.println("Dzielenie przez 0 jest niewykonalne!");
                     }
-                    System.out.println("Wynik to: " + wynik);
-                    break;
-                case "-":
+                }
+                case "-" -> {
                     wynik = (pierwszaLiczba - drugaLiczba);
                     System.out.println("Wynik to: " + wynik);
-                    break;
-                case "+":
+                }
+                case "+" -> {
                     wynik = (pierwszaLiczba + drugaLiczba);
                     System.out.println("Wynik to: " + wynik);
-                    break;
-                case "W":
+                }
+                case "W" -> {
                     System.out.println("Koniec");
-                    break;
-                default:
+                }
+                default -> {
                     System.out.println("Nieprawidłowa opcja, spróbuj jeszcze raz!");
-                    break;
+                }
             }
 
             System.out.println("Czy chcesz wykonać kolejne działanie? [T/N]");
             String pytanie = getString().toUpperCase();
             if (pytanie.equals("T")){
-                wynik = pierwszaLiczba;
+                pierwszaLiczba = wynik;
                 System.out.println("Podaj liczbę:");
                 drugaLiczba = getDouble();
                 System.out.println("""
@@ -74,6 +74,8 @@ public class Kalkulator {
             }
 
         } while(!(dzialanie.equals("W")));
+
+        System.out.println("Zakończono działanie.");
     }
     private static double getDouble() {
         return new Scanner(System.in).nextDouble();
