@@ -21,7 +21,5 @@ public class StringTabCompare {
         } else {
             System.out.println("Tablice się różnią");
         }
-
-
     }
 }
