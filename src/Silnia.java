@@ -3,9 +3,15 @@ public class Silnia {
     public static void main(String[] args) {
 
         System.out.println("Podaj liczbę, której chcesz obliczyć silnię");
-        int liczba = getInt();
-        int wynik = 1;
+        factorial(getInt());
 
+    }
+    private static int getInt(){
+        return new Scanner(System.in).nextInt();
+    }
+
+    public static void factorial(int liczba){
+        int wynik = 1;
         if (!(liczba == 0)){
             for(int i = 1;i <= liczba; i++){
                 wynik *= i;
@@ -15,7 +21,6 @@ public class Silnia {
             System.out.println("Silnia dla 0 to 1");
         }
     }
-    private static int getInt(){
-        return new Scanner(System.in).nextInt();
-    }
 }
+
+
