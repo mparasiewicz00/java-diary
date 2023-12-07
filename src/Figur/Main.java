@@ -44,5 +44,17 @@ public class Main {
         System.out.println("Line 1: " + line1);
         System.out.println("Polygon 1: " + polygon1);
         System.out.println("Group: " + group);
+
+        System.out.println("\nTestowanie metody clone:");
+
+        Figur clonedPoint = point1.clone();
+        Figur clonedLine = line1.clone();
+        Figur clonedPolygon = polygon1.clone();
+        Figur clonedGroup = group.clone();
+
+        System.out.println("Cloned Point: " + clonedPoint);
+        System.out.println("Cloned Line: " + clonedLine);
+        System.out.println("Cloned Polygon: " + clonedPolygon);
+        System.out.println("Cloned Group: " + clonedGroup);
     }
 }

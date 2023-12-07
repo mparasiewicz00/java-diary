@@ -10,9 +10,10 @@ package Figur;
 //        -equals(Object o) sprawdzającą, czy figury są równe
 //        -toString() zwracającą łańcuch znaków (String) reprezentujący daną figurę
 
-interface Figur {
+interface Figur extends Cloneable {
     void move(double dx, double dy);
     void flip();
     boolean equals(Object o);
     String toString();
+    Figur clone();  // Dodano metodę clone
 }

@@ -34,4 +34,14 @@ class Group implements Figur {
                 "figures=" + figures +
                 '}';
     }
+
+    @Override
+    public Figur clone() {
+        Group clonedGroup = new Group();
+        for (Figur figure : this.figures) {
+            clonedGroup.addFigure(figure.clone());
+        }
+        return clonedGroup;
+    }
+
 }

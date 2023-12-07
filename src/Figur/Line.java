@@ -9,11 +9,21 @@ class Line implements Figur {
         this.end = end;
     }
 
+    public Point getStart() {
+        return start;
+    }
+
+    public Point getEnd() {
+        return end;
+    }
+
+    @Override
     public void move(double dx, double dy) {
         start.move(dx, dy);
         end.move(dx, dy);
     }
 
+    @Override
     public void flip() {
         // Przerzucanie linii to zamiana punktów końcowych
         Point temp = start;
@@ -21,7 +31,7 @@ class Line implements Figur {
         end = temp;
     }
 
-
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -29,11 +39,16 @@ class Line implements Figur {
         return start.equals(line.start) && end.equals(line.end);
     }
 
+    @Override
     public String toString() {
         return "Line{" +
                 "start=" + start +
                 ", end=" + end +
                 '}';
     }
-}
 
+    @Override
+    public Figur clone() {
+        return new Line((Point) start.clone(), (Point) end.clone());
+    }
+}
