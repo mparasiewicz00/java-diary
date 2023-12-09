@@ -2,8 +2,8 @@ package elementTest;
 
 public class elementTab {
     public static boolean didElementExist(int[] basicTab, int number){
-        for (int i = 0; i < basicTab.length; i++){
-            if (basicTab[i] == number){
+        for (int j : basicTab) {
+            if (j == number) {
                 return true;
             }
         }
