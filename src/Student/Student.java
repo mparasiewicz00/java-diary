@@ -1,11 +1,16 @@
 package Student;
 
+import java.util.Arrays;
+
 public class Student {
-    private String name;
-    private int yearOfBirth ;
+    public String name;
+    public int yearOfBirth ;
     private int[] grades;
 
     public double gradesAverage() {
+        if (grades == null) {
+            return 0;
+        }
         int sumOfGrades = 0;
         for (int i = 0; i <= grades.length -1; i++) {
             sumOfGrades +=  grades[i];
@@ -23,5 +28,14 @@ public class Student {
 
     public void addStudentGrades(int[] studentGrades) {
         grades = studentGrades;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", yearOfBirth=" + yearOfBirth +
+                ", grades=" + Arrays.toString(grades) +
+                '}';
     }
 }
