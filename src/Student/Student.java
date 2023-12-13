@@ -7,15 +7,20 @@ public class Student {
     public int yearOfBirth ;
     private int[] grades;
 
-    public double gradesAverage() {
-        if (grades == null) {
-            return 0;
-        }
-        int sumOfGrades = 0;
-        for (int i = 0; i <= grades.length -1; i++) {
-            sumOfGrades +=  grades[i];
-        }
-        return (double) sumOfGrades / grades.length;
+    public Student () {
+        this("Uczeń testowy");
+    }
+    public Student (String name) {
+        this(name, 0, null);
+    }
+    public Student(String name, int yearOfBirth) {
+        this(name, yearOfBirth, null);
+    }
+
+    public Student (String name, int yearOfBirth, int[] grades) {
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.grades = grades;
     }
 
     public void setFirstName(String name) {
@@ -40,6 +45,16 @@ public class Student {
 
     public int[] getGrades() {
         return grades;
+    }
+    public double gradesAverage() {
+        if (grades == null) {
+            return 0;
+        }
+        int sumOfGrades = 0;
+        for (int i = 0; i <= grades.length -1; i++) {
+            sumOfGrades +=  grades[i];
+        }
+        return (double) sumOfGrades / grades.length;
     }
 
     @Override
