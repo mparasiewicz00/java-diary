@@ -6,17 +6,8 @@ public class Vehicle {
     private final int vehicleProductionYear;
 
     public Vehicle() {
-        this("not assigned", "not assigned", 0);
+        this("not assigned", "not assigned",0);
     }
-
-    public Vehicle(String vehicleID) {
-        this(vehicleID, "not assigned", 0);
-    }
-
-    public Vehicle(String vehicleID, String vehicleBrand) {
-        this(vehicleID, vehicleBrand, 0);
-    }
-
     public Vehicle(String vehicleID, String vehicleBrand, int vehicleProductionYear) {
         this.vehicleID = vehicleID;
         this.vehicleBrand = vehicleBrand;
