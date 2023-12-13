@@ -18,16 +18,28 @@ public class Student {
         return (double) sumOfGrades / grades.length;
     }
 
-    public void setFirstName(String studentName) {
-        name = studentName;
+    public void setFirstName(String name) {
+        this.name = name;
     }
 
-    public void setYearOfBirth(int birthOfStudent) {
-        yearOfBirth = birthOfStudent;
+    public String getName() {
+        return name;
     }
 
-    public void addStudentGrades(int[] studentGrades) {
-        grades = studentGrades;
+    public void setYearOfBirth(int yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    public int getYearOfBirth() {
+        return yearOfBirth;
+    }
+
+    public void setStudentGrades(int[] grades) {
+        this.grades = grades;
+    }
+
+    public int[] getGrades() {
+        return grades;
     }
 
     @Override
