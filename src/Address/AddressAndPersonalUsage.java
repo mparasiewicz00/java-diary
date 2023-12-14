@@ -8,7 +8,6 @@ public class AddressAndPersonalUsage {
         Personal personalAlbert = new Personal("Albert", "Einstein", 1879,
                 "Ulm", "03-999", "EMC", 2 );
 
-
         System.out.println(personalJan);
         System.out.println(personalAlbert);
 

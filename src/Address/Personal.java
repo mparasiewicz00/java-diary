@@ -6,7 +6,6 @@ public class Personal {
     public final int birthYear;
     public  Address address;
 
-
     public Personal(String firstName, String secondName, int birthYear, Address address) {
         this.firstName = firstName;
         this.secondName = secondName;
@@ -15,11 +14,10 @@ public class Personal {
     }
 
     public Personal(String firstName, String secondName, int birthYear, String city, String postalCode, String street, int houseNumber) {
-        Address address = new Address(city, postalCode, street, houseNumber);
         this.firstName = firstName;
         this.secondName = secondName;
         this.birthYear = birthYear;
-        this.address = address;
+        this.address = new Address(city, postalCode, street, houseNumber);
     }
     @Override
     public String toString() {
