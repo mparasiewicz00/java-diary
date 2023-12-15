@@ -8,8 +8,8 @@ public class AddressAndPersonalUsage {
         Personal personalAlbert = new Personal("Albert", "Einstein", 1879,
                 "Ulm", "03-999", "EMC", 2 );
 
-        Personal personalAlbertForEqual = new Personal("Albert", "Einstein", 1879,
-                "Ulm", "03-999", "EMC", 2 );
+        Personal personalAlbertForEqual = new Personal(null, "Einstein", 1879,
+                null, "03-999", "EMC", 2 );
 
 
         System.out.println(personalJan);
@@ -20,9 +20,6 @@ public class AddressAndPersonalUsage {
         } else {
             System.out.println("Objects not identical");
         }
-
-
-
 
     }
 }

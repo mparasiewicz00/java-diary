@@ -30,10 +30,15 @@ public class Personal {
     }
     @Override
     public boolean equals(Object o) {
+        if (o == null || (this.getClass() != o.getClass())){
+            return false;
+        }
+
         Personal personal1 = (Personal) o;
         return this.firstName.equals(personal1.firstName) &&
                 this.secondName.equals(personal1.secondName) &&
-                this.birthYear == personal1.birthYear;
+                this.birthYear == personal1.birthYear &&
+                this.address.equals(personal1.address);
 
     }
 }
