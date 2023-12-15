@@ -28,4 +28,12 @@ public class Personal {
                 ", address=" + address +
                 '}';
     }
+    @Override
+    public boolean equals(Object o) {
+        Personal personal1 = (Personal) o;
+        return this.firstName.equals(personal1.firstName) &&
+                this.secondName.equals(personal1.secondName) &&
+                this.birthYear == personal1.birthYear;
+
+    }
 }
