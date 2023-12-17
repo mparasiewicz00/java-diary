@@ -19,6 +19,27 @@ public class Personal {
         this.birthYear = birthYear;
         this.address = new Address(city, postalCode, street, houseNumber);
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public int getBirthYear() {
+        return birthYear;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
+
     @Override
     public String toString() {
         return "Personal{" +
@@ -35,6 +56,7 @@ public class Personal {
         }
 
         Personal personal1 = (Personal) o;
+
         return this.firstName.equals(personal1.firstName) &&
                 this.secondName.equals(personal1.secondName) &&
                 this.birthYear == personal1.birthYear &&
