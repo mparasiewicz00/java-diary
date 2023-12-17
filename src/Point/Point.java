@@ -1,3 +1,5 @@
+package Point;
+
 public class Point {
     private int x, y;
 
@@ -5,7 +7,6 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-
     public void setX(int x) {
         this.x = x;
     }
@@ -24,9 +25,26 @@ public class Point {
 
     @Override
     public String toString() {
-        return "Point{" +
+        return "Point.Point{" +
                 "x=" + x +
                 ", y=" + y +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (this == o){
+            return true;
+        }
+
+        if (this.getClass() != o.getClass()){
+            return false;
+        }
+
+
+        Point point = (Point) o;
+        return this.x == point.x &&
+                this.y == point.y;
     }
 }
