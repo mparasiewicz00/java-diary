@@ -19,7 +19,6 @@ public class Silnia {
     private static int getInt(){
         return new Scanner(System.in).nextInt();
     }
-
     public static void factorial(int liczba){
         int wynik = 1;
         if (!(liczba == 0)){
