@@ -5,7 +5,10 @@ public class Personal {
     private String firstName;
     private String secondName;
 
-    public void newAge(int ageValue){
+    public void newAge(int ageValue) throws IllegalAgeException {
+        if (ageValue <=0 ) {
+            throw new IllegalAgeException("Wiek musi być większy od 0!");
+        }
         age = ageValue;
     }
 
@@ -25,3 +28,5 @@ public class Personal {
                 '}';
     }
 }
+
+
