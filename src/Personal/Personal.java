@@ -6,15 +6,16 @@ public class Personal {
     private String secondName;
 
 
-    public Personal (int age, String firstName, String secondName) throws IllegalArgumentException {
+    public Personal (int age, String firstName, String secondName) throws IllegalAgeException,
+            IllegalNameException, IllegalSecondNameException {
         if (age <=0 ) {
-            throw new IllegalArgumentException("Wiek musi być większy od 0!");
+            throw new IllegalAgeException("Wiek musi być większy od 0!");
         }
         if ( firstName == null ) {
-            throw new IllegalArgumentException("Nie podano imienia.");
+            throw new IllegalNameException("Nie podano imienia.");
         }
         if (secondName == null ) {
-            throw new IllegalArgumentException("Nie podano nazwiska.");
+            throw new IllegalSecondNameException("Nie podano nazwiska.");
         }
         this.age = age;
         this.firstName = firstName;
