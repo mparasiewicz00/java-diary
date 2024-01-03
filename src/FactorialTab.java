@@ -17,9 +17,9 @@ public class FactorialTab {
                 for(int j = 1; j <= factorial[i]; j++){
                     result *= j;
                 }
-                System.out.println("Silnia dla liczby " + factorial[i] + " to: " + result);
+                System.out.println("Factorial.Silnia dla liczby " + factorial[i] + " to: " + result);
             } else {
-                System.out.println("Silnia dla 0 to 1");
+                System.out.println("Factorial.Silnia dla 0 to 1");
             }
             result = 1;
         }
