@@ -34,15 +34,24 @@ public class Personal {
         return secondName;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) throws IllegalAgeException {
+        if (age <=0 ) {
+            throw new IllegalAgeException("Wiek musi być większy od 0!");
+        }
         this.age = age;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName) throws IllegalNameException {
+        if ( firstName == null ) {
+            throw new IllegalNameException("Pole imię jest puste.");
+        }
         this.firstName = firstName;
     }
 
-    public void setSecondName(String secondName) {
+    public void setSecondName(String secondName) throws IllegalSecondNameException {
+        if (secondName == null ) {
+            throw new IllegalSecondNameException("Pole nazwisko jest puste.");
+        }
         this.secondName = secondName;
     }
 
