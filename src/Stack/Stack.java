@@ -17,9 +17,11 @@ public class Stack {
     public int getSize() {
         return currentSize;
     }
+    //clear stack elements
     public void clear() {
         currentSize = 0;
     }
+    //add int element to stack
     public void push(int added) {
         if (currentSize == values.length) {
             throw new StackFullException();
@@ -28,6 +30,7 @@ public class Stack {
             currentSize++;
         }
     }
+    //delete last added stack element and return current last element
     public int pop() {
         if (currentSize == 0) {
             throw new StackEmptyException();
@@ -36,6 +39,7 @@ public class Stack {
             return values[currentSize];
         }
     }
+    //return current top element
     public int top() {
         if (currentSize == 0) {
             throw new StackEmptyException();
